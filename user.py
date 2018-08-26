@@ -8,12 +8,6 @@ class User:
         '''
         __init__method that helps us define properties for our objects
 
-        Args:
-            first_name: New user first name.
-            last_name: New user last name.
-            email: New user email address.
-            password: New user password.
-        '''
         self.first_name = first_name
         self.last_name = last_name
         self.email = email
