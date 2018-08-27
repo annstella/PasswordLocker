@@ -5,11 +5,7 @@ class User:
 
     user_list = []
 
-    def save_user(self):
-        '''
-        save_user method saves user objects into user_list
-        '''
-        User.user_list.appeng(self)
+
     def __init__(self,first_name,last_name,number,email,password):
         '''
         __init__method that helps us define properties for our objects
@@ -28,8 +24,27 @@ class User:
         self.email = email
         self.password = password
 
+   def setUp(self):
+    '''
+    set up method to run before each test cases.
+    '''
+    self.new_user = User("Annstella","Kagai","annstellawangui12@gmail.com","annstella")
+
+   def tearDown(self):
+    '''
+    tearDown method that does clean up after each test case has run.
+    '''
+    User.user_list[]
+
+
     def save_user(self):
         '''
         save_user method saves user objects into user_list
         '''
         User.user_list.append(self)
+
+    def delete_user(self):
+        '''
+        delete_user method deletes a saved contact from the user_list
+        '''
+        User.user_list.remove(self)
