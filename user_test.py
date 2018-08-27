@@ -22,6 +22,7 @@ def test_init(self):
 
     self.assertEqual(self.new_user.first_name,"Annstella")
     self.assertEqual(self.new_user.last_name,"Kagai")
+    self.assertEqual(self.new_user.number,"0712345678")
     self.assertEqual(self.new_user.email,"annstellawangui12@gmail.com")
     self.assertEqual(self.new_user.password,"annstella")
 
@@ -70,4 +71,4 @@ def test_find_user_by_number(self):
     '''
 
     self.new_user.save_user()
-    test_user = User("Test","contact","0718245304","test@user.com")
+    test_user = User("Test","contact","0718245304","test@user.com","abcdefgh")
