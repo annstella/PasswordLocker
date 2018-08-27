@@ -39,6 +39,12 @@ def test_save_user(self):
 if __name == '__main__':
     unittest.main()
 
+def tearDown(self):
+    '''
+    tearDown method that does clean up after each test case has run.
+    '''
+    User.user_list[]
+
 def  test_save_multiple_user(self):
     '''
     test_save_multiple_user to check if we can save multiple user objects to our user_list
