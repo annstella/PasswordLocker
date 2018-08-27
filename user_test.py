@@ -13,7 +13,7 @@ def setUp(self):
     '''
     set up method to run before each test cases.
     '''
-    self.new_user = User("Annstella","Kagai","annstellawangui12@gmail.com","annstella")
+    self.new_user = User("Annstella","Kagai","0718245304","annstellawangui12@gmail.com","annstella")
 
 def test_init(self):
     '''
