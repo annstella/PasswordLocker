@@ -59,9 +59,19 @@ if __name__ == '__main__':
 def delete_user(self):
 
     '''
-    delete_user method deletes a saved user from the user_list
+    test_delete_user to test if we can remove a user from our user list
     '''
+    self.new_user.save_user(
+    test_user = User("Test","contact","test@contact.com","abcdefgh")
+    test_user.save_user()
 
+    self.new_user.delete_user()
+    self.assertEqual(len(Contact.contact_list),1)
+
+if __name__ == '__main__':
+    unittest.main()
+
+    )
     User.user_list.remove(self)
 
 def test_find_user_by_first_name(self):
