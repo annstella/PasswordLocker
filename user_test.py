@@ -63,3 +63,11 @@ def delete_user(self):
     '''
 
     User.user_list.remove(self)
+
+def test_find_user_by_number(self):
+    '''
+    test to check if we can find a user by phone number and display information
+    '''
+
+    self.new_user.save_user()
+    test_user = User("Test","contact","0718245304","test@user.com")
