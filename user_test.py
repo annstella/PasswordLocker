@@ -71,8 +71,7 @@ def delete_user(self):
 if __name__ == '__main__':
     unittest.main()
 
-    )
-    User.user_list.remove(self)
+    
 
 def test_find_user_by_first_name(self):
     '''
