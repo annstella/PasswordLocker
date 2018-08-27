@@ -52,3 +52,22 @@ class User:
     def user_exist(cls,first_name):
         '''
         Method that checks if a user exists from the user list.
+        '''
+        for user in cls.user_list:
+            if user.first_name == first_name:
+                return True
+
+   return False
+
+   @classmethod
+   def display_users(cls):
+       '''
+       method that returns the user list
+       '''
+       return cls.user_list
+
+class Credent:
+    '''
+    class that generates new instances of the user's credent
+    '''
+    credent_list=[]
