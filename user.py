@@ -47,3 +47,8 @@ class User:
         delete_user method deletes a saved contact from the user_list
         '''
         User.user_list.remove(self)
+
+    @classmethod
+    def user_exist(cls,first_name):
+        '''
+        Method that checks if a user exists from the user list.

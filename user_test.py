@@ -53,5 +53,16 @@ def test_delete_user(self):
     self.new_user.delete_user()
     self.assertEqual(len(Contact.contact_list),1)
 
+def test_user_exists(self):
+    '''
+    test to check if we can return a Boolean if we cannot find the user.
+    '''
+    self.new_user.save_user()
+    test_user = User("Test","contact","test@user.com","abcdefgh")
+    test_user.save_user()
+    user_exits = User.user_exist("Annstella")
+
+    self.assertTrue(user_exists)
+
 if __name__ == '__main__':
     unittest.main()
