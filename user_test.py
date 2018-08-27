@@ -38,3 +38,5 @@ def test_save_user(self):
 
 if __name == '__main__':
     unittest.main()
+
+def  test_save_multiple_contact(self):
