@@ -87,3 +87,21 @@ class Credent:
        delete_credent method deletes a saved credent from the credent_list
        '''
        Credent.credential_list.remove(self)
+
+    @classmethod
+    def find_by_user_name(cls,user_name):
+        '''
+        Method that takes in a user name and returns a credent that matches that user name.
+
+        returns :
+          Credential of user name that matches the account name.
+        '''
+
+        for credent in cls.credent_list:
+            if credent.user_name == user_name:
+                return credent
+
+    @classmethod
+    def credent_exist(cls,user_name):
+        '''
+        Method that checks if a credent exists from the credent list.
