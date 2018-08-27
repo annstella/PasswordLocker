@@ -70,4 +70,20 @@ class Credent:
     '''
     class that generates new instances of the user's credent
     '''
-    credent_list=[]
+    credent_list = []
+    def __init__(self,acc_name,user_name,pswrd):
+        self.acc_name = acc-name
+        self.user_name = user_name
+        self.pswrd = pswrd
+
+    def save_credent(self):
+        '''
+        save_credent method saves objects into list
+        '''
+        Credent.credent_list.append(self)
+
+   def delete_credent(self):
+       '''
+       delete_credent method deletes a saved credent from the credent_list
+       '''
+       Credent.credential_list.remove(self)
