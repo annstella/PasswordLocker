@@ -47,12 +47,12 @@ def main():
 
     while True:
 
-     print("Use these short codes : cc - create a new user, dc - display users, fc -find a user, ex -exit the user list ")
+        print("Use these short codes : cc - create a new user, dc - display users, fc -find a user, ex -exit the user list ")
 
-     short_code = input().lower()
+        short_code = input().lower()
 
 
-    if short_code == 'cc':
+        if short_code == 'cc':
                             print("New User")
                             print("-"*10)
 
@@ -73,7 +73,7 @@ def main():
                             print(f"New User {f_name} {l_name} created")
                             print ('\n')
 
-    elif short_code == 'dc':
+        elif short_code == 'dc':
 
                             if display_users():
                                     print("Here is a list of all your users")
@@ -88,7 +88,7 @@ def main():
                                     print("You dont have any users saved yet")
                                     print('\n')
 
-    elif short_code == 'fc':
+        elif short_code == 'fc':
 
                             print("Enter the email you want to search for")
 
