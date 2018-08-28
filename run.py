@@ -42,18 +42,17 @@ def display_users():
 def main():
     print("Hello. What is your name?")
     cotact_name = input()
+    print(f"Hello {contact_name}. what would you like to do?")
+    print('\n')
 
-            print(f"Hello {contact_name}. what would you like to do?")
-            print('\n')
-
- while True:
+    while True:
 
      print("Use these short codes : cc - create a new contact, dc - display contacts, fc -find a contact, ex -exit the contact list ")
 
      short_code = input().lower()
 
 
-                    if short_code == 'cc':
+    if short_code == 'cc':
                             print("New User")
                             print("-"*10)
 
@@ -69,12 +68,12 @@ def main():
                             print("Set password ...")
                             s_address = input()
 
-                             save_users(create_user(f_name,l_name,e_address,s_password)) # create and save new contact.
+                            save_users(create_user(f_name,l_name,e_address,s_password)) # create and save new contact.
                             print ('\n')
                             print(f"New User {f_name} {l_name} created")
                             print ('\n')
 
-                    elif short_code == 'dc':
+    elif short_code == 'dc':
 
                             if display_users():
                                     print("Here is a list of all your users")
@@ -84,12 +83,12 @@ def main():
                                             print(f"{user.first_name} {user.last_name} .....{user.email_address}")
 
                                     print('\n')
-                                     else:
+                            else:
                                     print('\n')
                                     print("You dont have any users saved yet")
                                     print('\n')
 
-                    elif short_code == 'fc':
+    elif short_code == 'fc':
 
                             print("Enter the email you want to search for")
 
@@ -103,8 +102,10 @@ def main():
                             else:
                                     print("That user does not exist")
 
-                    elif short_code == "ex":
-                            print("Bye .......")
-                            break
-                    else:
-                            print("I really didn't get that. Please use the short codes")
+    # elif short_code == "ex":
+    #                         print("Bye .......")
+    # break
+    # else:
+    #     print("I really didn't get that. Please use the short codes")
+if __name__ == '__main__':
+    main()
