@@ -94,7 +94,7 @@ class Credent:
         Method that takes in a user name and returns a credent that matches that user name.
 
         returns :
-          Credential of user name that matches the account name.
+          Credent of user name that matches the account name.
         '''
 
         for credent in cls.credent_list:
@@ -105,3 +105,16 @@ class Credent:
     def credent_exist(cls,user_name):
         '''
         Method that checks if a credent exists from the credent list.
+        '''
+        for credent in cls.credent_list:
+            if credent.user_name == user_name:
+                return True
+
+    return False
+
+    @classmethod
+    def display_credent(cls):
+        '''
+        returns credent list
+        '''
+        return cls.credent_list
