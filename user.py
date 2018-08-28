@@ -13,9 +13,8 @@ class User:
         Args:
             first_name: New user first name.
             last_name : New user last name.
-            number: New user phone number.
             email : New user email address.
-            password: New user password.
+            password: New user set password.
         '''
 
         self.first_name = first_name
@@ -23,17 +22,17 @@ class User:
         self.email = email
         self.password = password
 
-   def setUp(self):
-    '''
-    set up method to run before each test cases.
-    '''
-    self.new_user = User("Annstella","Kagai","annstellawangui12@gmail.com","annstella")
+    def setUp(self):
+        '''
+        set up method to run before each test cases.
+        '''
+        self.new_user = User("Annstella","Kagai","annstellawangui12@gmail.com","annstella")
 
-   def tearDown(self):
-    '''
-    tearDown method that does clean up after each test case has run.
-    '''
-    User.user_list[]
+    def tearDown(self):
+        '''
+        tearDown method that does clean up after each test case has run.
+        '''
+        User.user_list= []
 
 
     def save_user(self):
@@ -48,7 +47,7 @@ class User:
         '''
         User.user_list.remove(self)
 
-     @classmethod
+    @classmethod
     def find_by_first_name(cls,first_name):
         '''
         Method that takes in a firstname and returns a user that matched that firstname.
@@ -71,10 +70,10 @@ class User:
             if user.first_name == first_name:
                 return True
 
-   return False
+                return False
 
-   @classmethod
-   def display_users(cls):
+    @classmethod
+    def display_users(cls):
        '''
        method that returns the user list
        '''
@@ -86,7 +85,7 @@ class Credent:
     '''
     credent_list = []
     def __init__(self,acc_name,user_name,pswrd):
-        self.acc_name = acc-name
+        self.acc_name = acc_name
         self.user_name = user_name
         self.pswrd = pswrd
 
@@ -96,11 +95,11 @@ class Credent:
         '''
         Credent.credent_list.append(self)
 
-   def delete_credent(self):
+    def delete_credent(self):
        '''
        delete_credent method deletes a saved credent from the credent_list
        '''
-       Credent.credential_list.remove(self)
+       Credent.credent_list.remove(self)
 
     @classmethod
     def find_by_user_name(cls,user_name):
@@ -124,7 +123,7 @@ class Credent:
             if credent.user_name == user_name:
                 return True
 
-    return False
+                return False
 
     @classmethod
     def display_credent(cls):
