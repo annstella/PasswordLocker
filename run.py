@@ -41,7 +41,7 @@ def display_users():
 
 def main():
     print("Hello. What is your name?")
-    cotact_name = input()
+    contact_name = input()
     print(f"Hello {contact_name}. what would you like to do?")
     print('\n')
 
