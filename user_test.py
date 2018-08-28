@@ -1,5 +1,6 @@
 import unittest
-from user import user
+import pyperclip
+from user import User , Credent
 
 class TestUser(unittest.TestCase):
     '''
